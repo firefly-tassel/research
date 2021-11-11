@@ -1,0 +1,49 @@
+.example {
+    // background: rgb(37, 15, 163);
+    background: url('../../assets/images/star.jpg');
+    background-size: 100% 100%;
+    width: 116rem;
+    height: 64.5rem;
+    overflow: scroll;
+    .news {
+        margin: 4rem 8rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        box-shadow: 0.5rem 0.5rem 1rem #fff;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        .title {
+            text-align: center;
+            font-size: 3rem;
+            .snow {
+                position: absolute;
+                right: 2%;
+                top: 8%;
+                height: 5rem;
+                width: 5rem;
+                z-index: 1;
+                // background: rgb(37, 15, 163);
+            }
+        }
+        .newsItem {
+            text-decoration: none;
+            list-style: none;
+            margin: 4rem 5rem;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .snow {
+      animation: snow-drop infinite 10s linear;
+    }
+}
+
+@keyframes snow-drop {
+    0% {
+      transform: translate(0, 0) rotateY(0deg);
+    }
+    100% {
+      transform: translate(0, 600px) rotateY(360deg);
+    }
+}

@@ -1,0 +1,67 @@
+.introduce {
+    position: absolute;
+    top: 22%;
+    left: 60%;
+    .introduce_text {
+        font-size: 4rem;
+        color: white;
+        text-shadow: 0.1rem 0.1rem 0.3rem #fff;
+        .detail {
+            text-shadow: none;
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            font-weight: 430;
+        }
+    }
+    .introduce_btn {
+        margin-left: 10rem;
+        .btn1 {
+            font-weight: bolder;
+            text-decoration: none;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 0.5rem;
+            z-index: 1;
+        }
+        .btn2 {
+            font-weight: bolder;
+            text-decoration: none;
+            background: black;
+            color: white;
+            text-transform: uppercase;
+            border: 0.1rem solid darkturquoise;
+            border-radius: 0.5rem;
+            z-index: 1;
+        }
+        .btn2:hover {
+            border: 0.1rem solid #fff;
+        }
+        .modal {
+            border-radius: 2rem;
+        }
+    }
+    .introduce_logo {
+        position: absolute;
+        top: 88%;
+        left: 80%;
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .introduce_logo {
+      animation: introduce-logo-spin infinite 10s linear;
+    }
+}
+
+@keyframes introduce-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
