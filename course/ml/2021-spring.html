@@ -1,0 +1,1420 @@
+<!DOCTYPE HTML>
+<!--
+  Twenty by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+  <head>
+    <title>ML 2021 Spring</title>
+	<meta property="og:image" content="https://speech.ee.ntu.edu.tw/~hylee/images/ml-title.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../favicon.ico"/>
+	<link rel="bookmark" href="../favicon.ico"/>
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <style>
+      .cool{
+	    background: url('../images/cool.ico');
+		height: 16px;
+		width: 16px;
+		display: block;
+	  }
+
+      * {
+        box-sizing: border-box;
+        }
+
+      /* Set a background color */
+      body{
+	  background-color: #003366;
+	  }  
+      /* The actual timeline (the vertical ruler) */
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+	  }
+
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #ffbf80;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      /* Container around content */
+      .container_timeline {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+
+      /* The circles on the timeline */
+      .container_timeline::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -13px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      /* Place the container to the left */
+      .left {
+        left: 0;
+      }
+
+      /* Place the container to the right */
+      .right {
+        left: 50%;
+      }
+
+      /* Add arrows to the left container (pointing right) */
+      .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #ecf2f9;
+      }
+
+      /* Add arrows to the right container (pointing left) */
+      .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #ecf2f9 transparent transparent;
+      }
+
+      /* Fix the circle for containers on the right side */
+      .right::after {
+        left: -12px;
+      }
+
+      /* The actual content */
+      .content_timeline {
+        padding: 20px 30px;
+        background-color: #ecf2f9;
+        position: relative;
+        border-radius: 6px;
+      }
+
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+      @media screen and (max-width: 600px) {
+      /* Place the timelime to the left */
+        .timeline::after {
+          left: 31px;
+        }
+
+      /* Full-width containers */
+        .container_timeline {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+      /* Make sure that all arrows are pointing leftwards */
+        .container_timeline::before {
+          left: 60px;
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent #ecf2f9 transparent transparent;
+        }
+
+      /* Make sure all circles are at the same spot */
+        .left::after, .right::after {
+          left: 18px;
+        }
+
+      /* Make all right containers behave like the left ones */
+        .right {
+          left: 0%;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+
+      <!-- Header -->
+        <header id="header">
+          <h1 id="logo" style="font-size: medium; font-weight: 500"><a href="../index.html">Hung-yi Lee (李宏毅)</a></h1>
+          <nav id="nav">
+            <ul>
+              <li class="menu"><a href="../index.html">Home</a></li>
+              <li class="menu"><a href="../honor.html">Honor</a></li>
+              <li class="menu"><a href="../research.html">Research</a></li>
+              <li class="menu"><a href="../talk.html">Talk</a></li>
+              <li class="menu"><a href="../publication.html">Publication</a></li>
+              <li class="submenu current">
+                <a href="#">Course</a>
+                <ul>
+                  <li class="submenu">
+                    <a href="#">Machine Learning</a>
+                    <ul>
+                      <li><a href="../ml/2021-spring.html">2021 Spring</a></li>
+                      <li><a href="../ml/2020-spring.html">2020 Spring</a></li>
+                      <li><a href="../ml/2019-spring.html">2019 Spring</a></li>
+                      <li><a href="../ml/2017-fall.html">2017 Fall</a></li>
+                      <li><a href="../ml/2017-spring.html">2017 Spring</a></li>
+                      <li><a href="../ml/2016-fall.html">2016 Fall</a></li>
+                    </ul>
+                  </li>
+                  <li class="submenu">
+                    <a href=#>DLHLP</a>
+                    <ul>
+                      <li><a href="../dlhlp/2020-spring.html">2020 Spring</a></li>
+                    </ul>
+                  </li>
+                  <li class="submenu">
+                    <a href="#">MLDS</a>
+                    <ul>
+                      <li><a href="../mlds/2018-spring.html">2018 Spring</a></li>
+                      <li><a href="../mlds/2017-spring.html">2017 Spring</a></li>
+                      <li><a href="../mlds/2015-fall.html">2015 Fall</a></li>
+                    </ul>
+                  </li>
+                  <li class="submenu">
+                    <a href="#">Linear Algebra</a>
+                    <ul>
+                      <li><a href="../la/2021-fall.html">2021 Fall</a></li>
+                      <li><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses/LA_2020/policy.pdf" target="_blank" rel="noreferrer noopener">2020 Fall</a></li>
+                      <li><a href="../la/2019-fall.html">2019 Fall</a></li>
+                      <li><a href="../la/2018-fall.html">2018 Fall</a></li>
+                      <li><a href="../la/2016-spring.html">2016 Spring</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../circuit/2014-fall.html">Circuit</a></li>
+                </ul>
+              </li>
+              <li class="menu"><a href="https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ/playlists" target="_blank" rel="noopener noreferrer">Youtube</a></li>
+            </ul>
+          </nav>
+
+        </header>
+
+      <!-- Main -->
+        <article id="main">
+
+          <header class="special container">
+            <span class="icon solid fas fa-brain" style="color: #ffffff"></span>
+            <h2 style="color: white">Machine Learning 2021 Spring</h2>
+          </header>
+		  <!--
+		  <div style="text-align: center; margin-bottom: 1.2em">
+		    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring-zh.html" 
+			  class="btn btn-outline-secondary btn-lg active"
+			  role="button" aria-pressed="true">中文班</a>
+ 		    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.html" \
+		      class="btn btn-outline-primary btn-lg active" role="button" aria-pressed="true">English Class</a>
+          </div>
+		  -->
+		  <!-- One -->
+            <section class="wrapper style4 container" style="border-radius: 20px;">
+              <!-- Content -->
+                <div class="content">
+                  <section>
+                    <header style = "text-align: center">
+                      <h3>News</h3>
+                    </header>
+                  </section>
+                  <div class="row row-striped" style="border: 5px solid #e0e0eb; border-radius: 20px; margin-bottom: 10px">
+            		<div class="col-2 text-right" style="text-align: center; margin-right: 0">
+				      <h1 class="display-4"><span class="badge bg-secondary">07</span></h1>
+				      <h2>May</h2>
+			        </div>
+                    <div class="col-1">
+                    </div>
+			        <div class="col-9">
+				      <h3 class="text-uppercase"><strong>HW9 and HW10 Released!</strong></h3>
+		                <p style="font-size: 1.2rem">
+						  HW9 and HW10 have been released. The deadline of HW9 is 05/28 23:59 (UTC+8). 
+						  The JudgeBoi deadline for HW10 is 05/28 23:59 (UTC+8) and code submission deadline is 
+						  05/30 23:59 (UTC+8).
+						  We do not take late submissions.
+						</p>
+              		</div>
+				  </div>
+
+                  <div class="row row-striped" style="border: 5px solid #e0e0eb; border-radius: 20px; margin-bottom: 10px">
+            		<div class="col-2 text-right" style="text-align: center; margin-right: 0">
+				      <h1 class="display-4"><span class="badge bg-secondary">30</span></h1>
+				      <h2>Apr</h2>
+			        </div>
+                    <div class="col-1">
+                    </div>
+			        <div class="col-9">
+				      <h3 class="text-uppercase"><strong>HW7 and HW8 Released!</strong></h3>
+		                <p style="font-size: 1.2rem">
+						  HW7 and HW8 have been released. The kaggle deadlines of HW7 and HW8 are both 05/21 23:59 (UTC+8). 
+						  You also need to submit your codes for both homework to NTU COOL before 05/23 23:59 (UTC+8).
+						  We do not take late submissions.
+						</p>
+              		</div>
+		          </div>
+
+
+                  <div class="row row-striped" style="border: 5px solid #e0e0eb; border-radius: 20px; margin-bottom: 10px">
+            		<div class="col-2 text-right" style="text-align: center; margin-right: 0">
+				      <h1 class="display-4"><span class="badge bg-danger">26</span></h1>
+				      <h2>Feb</h2>
+			        </div>
+                    <div class="col-1">
+                    </div>
+			        <div class="col-9">
+				      <h3 class="text-uppercase"><strong>Rules for ML2021, Spring</strong></h3>
+		                <p style="font-size: 1.2rem">
+						  We have updated the rules for the of English class and Chinese class.<br>
+						  English: <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/introduction-2021-v6-English.pdf"
+						   target="_blank" rel="noopener noreferrer">rule</a> and <a
+						    href="https://youtu.be/5pIIaLLmQ6k"target="_blank" rel="noopener noreferrer">
+						  video</a><br>
+						  Chinese: <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/introduction-2021-v6-Chinese.pdf"
+						    target="_blank" rel="noopener noreferrer">rule</a> and <a
+							href="https://youtu.be/IHk7z51zOLw" target="_blank" rel="noopener noreferrer">
+						  video</a>
+						</p>
+              		</div>
+		          </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="wrapper style4 container"  style="background-color: #003366">
+              <!-- Content -->
+                <div class="content">
+                  <section>
+                    <header style = "text-align: center">
+                      <h3 style="color: white">Syllabus</h3>
+					</header>
+
+
+					<div class="timeline">
+					  <div class="container_timeline left">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Introduction</strong></p>
+						  <p>
+						    <ul>
+							  <li>
+							    Youtube:
+								<ul>
+								  <li>Chinese: 
+								    <a href="https://youtu.be/Ye018rCVvOo" 
+									  target="_blank" rel="noopener noreferrer">video 1</a> <a 
+									  href="https://youtu.be/bHcJCp2Fyxs" target="_blank" rel="noopener noreferrer">
+									  video 2</a>
+								  </li>
+								  <li>English: 
+								    <a href="https://www.youtube.com/watch?v=Y87Ct23H3Kw" 
+									  target="_blank" rel="noopener noreferrer">video 1</a> <a 
+									  href="https://www.youtube.com/watch?v=O69EqgzUl9U" target="_blank" rel="noopener noreferrer">
+									  video 2</a>
+								  </li>
+								</ul>
+							  </li>
+							  <li>Slides:
+							    <ul>
+								  <li>
+								  English class  course intro: 
+								  <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/introduction 2021 (v6) English.pptx"
+								    download>ppt</a> 
+								  <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/introduction-2021-v6-English.pdf" 
+								    target="_blank" rel="noopener noreferrer">pdf</a>
+                                  </li>
+								  <li>
+								  Chinese class course intro: 
+								  <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/introduction 2021 (v6) Chinese.pptx"
+								    download>ppt</a> 
+								  <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/introduction-2021-v6-Chinese.pdf" 
+								    target="_blank" rel="noopener noreferrer">pdf</a>
+                                  </li>
+								  <li>
+								  Introduction of ML/DL: 
+								  <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/regression (v16).pptx"
+								    download>ppt</a> 
+								  <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/regression (v16).pdf" 
+								    target="_blank" rel="noopener noreferrer">pdf</a>
+								  </li>
+								</ul>
+								<ul>
+								</ul>
+							  </li>
+						      <li>HW1: Regression</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	
+                      <div class="container_timeline right">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Deep Learning</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+							    <ul>
+								  <li>General Guidance: 
+								    <a href="https://www.youtube.com/watch?v=WeHM2xpYQpw"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+									<a href="https://youtu.be/3qgKpBptyFY"
+									  target="_blank" rel="noopener noreferrer">English</a>  
+								  </li>
+								  <li>When Gradient Is Small: Local Minimum and Saddle Point: 
+								    <a href="https://www.youtube.com/watch?v=QW6uINn7uGk"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+									<a href="https://youtu.be/yz7QS1I6omw"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  <li>Tips for Training: Batch and Momentum:  
+								    <a href="https://www.youtube.com/watch?v=zzbr1h9sF54"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+									<a href="https://youtu.be/MNoEQ9w-AbE"
+									  target="_blank" rel="noopener noreferrer">English</a>  
+								  </li>
+							      <li>Tips for Training: Adaptive Learning Rate:  
+								    <a href="https://www.youtube.com/watch?v=HYUXEeh3kwY"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+									<a href="https://www.youtube.com/watch?v=8yf-tU7zm7w"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>
+      					          <li>Loss Function: Classification:  
+								    <a href="https://www.youtube.com/watch?v=O2VkP8dJ5FE"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+									<a href="https://www.youtube.com/watch?v=jqVONJ-Wn8w"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>
+                    		    </ul>
+							  </li>
+							  <li>Slides:
+							    <ul>
+								  <li>Guideline of ML: overfit: 
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/overfit-v6.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/overfit-v6.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>	
+                                  <li>Critical Point: small gradient:
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/small-gradient-v7.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/small-gradient-v7.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>		
+                                  <li>Adaptive Learning Rate: optimizer: 
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/optimizer_v4.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/optimizer_v4.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>		
+							      <li>Loss of Classification: classification: 
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/classification_v2.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/classification_v2.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>		
+	</ul>
+							  </li>
+						      <li>HW2: Classification</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>
+                      <div class="container_timeline left">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>CNN & Self-Attention</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+							    <ul>
+								  <li>CNN:  
+								    <a href="https://www.youtube.com/watch?v=OP5HcXJg2Aw"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+									<a href="https://www.youtube.com/watch?v=I4eLIsPM9Yc"
+									  target="_blank" rel="noopener noreferrer">English</a>  
+								  </li>
+                                  <li>Self-Attention:  
+								    <a href="https://www.youtube.com/watch?v=hYdO9CscNes"
+									  target="_blank" rel="noopener noreferrer">Chinese 1</a>
+								    <a href="https://www.youtube.com/watch?v=gmsMY5kc-zw"
+									  target="_blank" rel="noopener noreferrer">Chinese 2</a>
+									<a href="https://www.youtube.com/watch?v=0djMUi2-uV4"
+									  target="_blank" rel="noopener noreferrer">English 1</a> 
+									<a href="https://www.youtube.com/watch?v=zeCDPYZli0k"
+									  target="_blank" rel="noopener noreferrer">English 2</a>   
+								  </li>
+								</ul>
+							  </li>
+							  <li>Slides:
+							    <ul>
+								 <li>ML Pretest:
+								   <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/pretest.pdf"									                                     
+								     target="_blank" rel="noopener noreferrer">pdf</a>
+								 </li>
+							     <li>CNN: 
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/cnn_v4.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/cnn_v4.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>		
+                                  <li>Self-Attention: 
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/self_v7.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/self_v7.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>		
+                                </ul>
+							  </li>
+						      <li>HW3: CNN</li>
+							  <li>HW4: Self-Attention</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>
+                      <div class="container_timeline right">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Theory of ML (Prof. Pei-Yuan Wu)</strong></p>
+						  <p>
+						    <ul>
+							  <li>Slides:
+							    <ul>
+								  <li>PAC Learning:
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/W14_PAC-introduction.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  							
+								  </li>	  
+							    </ul>  
+							  </li>	
+							</ul>  	
+						  </p>
+						</div>
+					  </div>	
+                      <div class="container_timeline left">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Transformer</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+							    <ul>
+								  <li>Normalization:
+								    <a href="https://www.youtube.com/watch?v=BABPWOkSbLE"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=t3u3WshJQV8"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+                                  </li>
+								  <li>Transformer:
+								    <a href="https://www.youtube.com/watch?v=n9TlOhRjYoc"
+									  target="_blank" rel="noopener noreferrer">Chinese 1</a>
+									<a href="https://youtu.be/N6aRv06iv2g"
+									  target="_blank" rel="noopener noreferrer">Chinese 2</a>
+								    <a href="https://www.youtube.com/watch?v=zmOuJkH9l9M"
+									  target="_blank" rel="noopener noreferrer">English 1</a>
+									<a href="https://www.youtube.com/watch?v=fPTj5Zh1ACo"
+									  target="_blank" rel="noopener noreferrer">English 2</a> 
+  
+								  </li>
+								</ul>
+							  </li>
+							  <li>Slides:
+							    <ul>
+								  <li>Normalization:
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/normalization_v4.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/normalization_v4.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+
+								  </li>
+								  <li>Seq2Seq:
+                                    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/seq2seq_v9.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/seq2seq_v9.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+
+								  </li>
+								</ul>
+							  </li>
+						      <li>HW5: Transformer</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	
+	                  <div class="container_timeline right">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Generative Model</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+							  	<ul>
+								  <li>GAN: Basic:
+								    <a href="https://youtu.be/4OWp0wDu6Xw"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=Mb9kddLfLRI"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+                                  </li>
+								  <li>Theory of GAN and WGAN: 
+								    <a href="https://youtu.be/jNY1WBb8l4U"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=kFhv1I_fbZI"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>
+								  <li>Evaluation of GAN and Conditional GAN: 
+								    <a href="https://www.youtube.com/watch?v=MP0BnVH2yOo"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=XcAmPtMQqS8"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+								  <li>CycleGAN: 
+								    <a href="https://youtu.be/wulqhgnDr7E"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtube.com/watch?v=6xRAiKAYPxU"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>
+								</ul>
+							  </li>
+							  <li>Slides:
+							    <ul>
+								<li>GAN:
+							    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/gan_v10.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/gan_v10.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+                                </li>
+                                </ul> 
+							  </li>
+						      <li>HW6: GAN</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>
+                      <div class="container_timeline left">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Self-Supervised Learning</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+							  	<ul>
+								  <li>Models on the Sesame Street:
+								    <a href="https://youtu.be/e422eloJ0W4"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=mEcVirwmrkA"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+                                  </li>
+								  <li>Introduction of Bert: 
+								    <a href="https://youtu.be/gh0hewYkjgo"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=L-ZQ-6vKOxU"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>
+								  <li>Fun Facts about BERT: 
+								    <a href="https://youtu.be/ExXA05i8DEQ"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=L-ZQ-6vKOxU"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>
+								  <li>GPT-3: 
+								    <a href="https://youtu.be/WY_E0Sd4K80"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=6sAf24QvJEY"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								  <li>Auto-Encoders: Basic Concepts: 
+								    <a href="https://youtu.be/3oHlf8-J3Nc"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=E7wlA85RxcI"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+								  <li>Auto-Encoders: Voice Conversion and More Applications: 
+								    <a href="https://youtu.be/JZvEzb5PV3U"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=PsBHWq9KKqk"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+
+								</ul>
+
+							  </li>
+							  <li>Slides:
+							    <ul>
+								<li>BERT:
+							    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/bert_v8.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/bert_v8.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+                                </li>
+								<li>Auto-Encoder:
+							    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/auto_v8.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/auto_v8.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+                                </li>
+
+                                </ul> 
+
+							  </li>
+						      <li>HW7: BERT</li>
+							  <li>HW8: Anomaly Detection</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	
+                      <div class="container_timeline right">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Explainable AI / Adversarial Attack </strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+							    <ul>
+								  <li>Adversarial Attack: Basic Concepts: 
+								    <a href="https://youtu.be/xGQKhbjrFRk"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=xw6K4naFWFg"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+								  <li>Adversarial Attack: Attack and Defense: 
+								    <a href="https://youtu.be/z-Q9ia5H2Ig"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=kRmBiV2X810"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+								  <li>Explainable AI: Why Does the Model Make This Prediction: 
+								    <a href="https://youtu.be/WQY85vaQfTI"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=4rVD1EOaAX4"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+								  <li>Explainable AI: Why Does a Cat Look Like (for a Model): 
+								    <a href="https://youtu.be/0ayIPqbdHYQ"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=5VPy7OGlGMQ"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+
+								</ul>
+							  </li>
+							  <li>Slides:
+							    <ul>
+								  <li>Adversarial Attack:
+							        <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/attack_v3.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/attack_v3.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+								  </li>	 
+								  <li>Explainable AI:
+							        <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/xai_v4.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/xai_v4.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+								  </li>	  
+
+								</ul>	  
+                              </li>
+						      <li>HW9: Explainable AI</li>
+							  <li>HW10: Adversarial Attack</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	
+                      <div class="container_timeline left">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Domain Adaptation</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+								    <a href="https://youtu.be/Mnk_oUrgppM"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=8AKqH6V9kjE"
+									  target="_blank" rel="noopener noreferrer">English</a>
+							  </li>
+							  <li>Slides:
+							        <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/da_v6.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/da_v6.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							  </li>
+							  <li>HW11: Adaptation</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	
+                      <div class="container_timeline right">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Privacy v.s. ML (Prof. Pei-Yuan Wu)</strong></p>
+						</div>
+					  </div>	
+                      <div class="container_timeline left">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>RL</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+							    <ul>
+								  <li>DRL: Basics
+								    <a href="https://youtu.be/XWukX-ayIrs"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://www.youtube.com/watch?v=0oucZNfBXlI"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								  <li>DRL: Policy Gradient
+								    <a href="https://youtu.be/US8DFaAZcp4"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/jbN0oYLtXps"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+								  <li>DRL: Actor-Critic
+								    <a href="https://youtu.be/kk6DqWreLeU"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/Cf-WkM-Xef0"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								  <li>DRL: When Reward Is Sparse
+								    <a href="https://youtu.be/73YyF1gmIus"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/pibO_5JhQ4U"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								  <li>DRL: Imitation Learning
+								    <a href="https://youtu.be/75rZwxKBAf0"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/9H3ShV57lHs"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								</ul>
+							  </li>
+							  <li>Slides:
+							    <ul>
+								  <li>DRL:
+							        <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/drl_v5.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/drl_v5.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+								  </li>	  
+								</ul> 
+							  </li>
+						      <li>HW12: RL</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	
+    				  <div class="container_timeline right">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Quantum ML (Prof. Hao-Chung Cheng)</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:</li>
+							  <li>Slides:
+								<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/GuestLecture_QML.pdf"
+								  target="_blank" rel="noopener noreferrer">pdf</a> 
+							  </li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	
+                      <div class="container_timeline left">
+						<div class="content_timeline">
+						  <p style="font-size: large" ><strong>Life-Long/Compression</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+								<ul>
+								  <li>LLL: Catastrophic Forgetting
+								    <a href="https://youtu.be/rWF9sg5w6Zk"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/yAX8Ydfek_I"
+									  target="_blank" rel="noopener noreferrer">English</a> 
+								  </li>	
+								  <li>LLL: Mitigating Catastrophic Forgetting
+								    <a href="https://youtu.be/Y9Jay_vxOsM"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/-2r4cqDP4BY"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								  <li>Compression: Pruning and the Lottery Ticket Hypothesis
+								    <a href="https://youtu.be/utk3EnAUh-g"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/CB0a3aBwND8"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								  <li>Compression: Knowledge Distillation
+								    <a href="https://youtu.be/xrlbLPaq_Og"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/mGRdOGdOZ-4"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+
+								</ul>
+
+							  </li>
+							  <li>Slides:
+							    <ul>
+								  <li>Life-long Learning:
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/life_v2.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/life_v2.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>
+								  <li>Network Compression:
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/tiny_v7.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/tiny_v7.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>
+
+								</ul>  
+						      <li>HW13: Compression </li>
+							  <li>HW14: Life-long Learning </li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	
+					  <div class="container_timeline right">
+					    <div class="content_timeline">
+						  <p style="font-size: large" ><strong>Meta Learning</strong></p>
+						  <p>
+						    <ul>
+							  <li>Youtube:
+							    <ul>
+								  <li>Three steps in meta learning
+								    <a href="https://youtu.be/xoastiYx9JU"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/FmJ4T4k88jY"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								  <li>You can meta learn everything!
+								    <a href="https://www.youtube.com/watch?v=Q68Eh-wm1Ts"
+									  target="_blank" rel="noopener noreferrer">Chinese</a>
+								    <a href="https://youtu.be/dgnUlFAZUo8"
+									  target="_blank" rel="noopener noreferrer">English</a>
+								  </li>	
+								</ul>
+							  </li>
+							  <li>Slides:
+							    <ul>
+								  <li>Meta Learning:
+									<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/meta_v3.pptx"
+									  target="_blank" rel="noopener noreferrer">ppt</a>
+								    <a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/meta_v3.pdf"
+									  target="_blank" rel="noopener noreferrer">pdf</a>  
+							      </li>	
+								</ul>  
+
+							  </li>
+							  <li>HW15: Meta Learning</li>
+							</ul>  
+						  </p>
+						</div>
+					  </div>	                   	  
+                    </div>	 
+                  </section>
+                </div>  
+            </section>
+
+            <section class="wrapper style4 container" style="border-radius: 20px;">
+              <!-- Content -->
+                <div id="hw" class="content">
+                  <section>
+                    <header style = "text-align: center">
+                      <h3>Homework</h3>
+                    <header>
+					<div>
+                      <p style="font-size: large; text-align: left">
+					    The information here is tentative and subject to change. 
+						Please read the requirement of each homework before deadline.
+						There are different platforms for each homework, including Kaggle <i class="fab fa-kaggle"></i>
+						, NTU COOL <i class="far fa-check-square"></i>, and JudgeBoi <i class="fas fa-mars"></i>.
+						Remember to submit to <strong>EVERY</strong> required platform.
+						<div class="alert alert-danger" role="alert" style="text-align: left; font-size: large">
+						  <ul>
+						    <li>You should finish your homework on your own.</li>
+						    <li>You should NOT modify your prediction files manually.</li>
+						    <li>Do NOT share codes or prediction files with any living creatures.</li>
+						    <li>Do NOT use any approaches to submit your results more than 5 times a day.</li>
+						    <li>Do NOT search or use additional data or pre-trained models.</li>
+						    <li>Your final grade will be subject to a 10% penalty if you violate any of the above rules.</li>
+						    <li>Prof. Lee & TAs preserve the rights to change the rules & grades.</li>
+						  </ul>		
+						</div>
+					  </p>
+                    </div>
+					<div style="overflow-x: auto">
+					  <table class="table">
+					    <thead>
+						  <tr>
+						    <th>#</th>
+							<th>HW</th>
+						    <th>Slide</th>
+						    <th>Code</th>
+							<th>Platforms</th>
+							<th>Video(En)</th>
+							<th>Video(Zh)</th>
+							<th>Date</th>
+							<th>TA</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+						    <td>x</td>
+							<td>Colab Tutorial</td>
+							<td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/Colab/Google_Colab_Tutorial.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td>
+							<td><a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/Colab/Google_Colab_Tutorial.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							</td> 
+							<td>N/A</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/Q4yskCCixhw" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/5v41Scv_ZEM" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>		
+							</th>
+							<th>N/A</th>
+							<th>許湛然</th>
+						  </tr>
+						  <tr>
+						    <td id="hw0">x</td>
+							<td>Pytorch Tutorial</td>
+							<td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/Pytorch/Pytorch_Tutorial_1.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							<a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/Pytorch/Pytorch_Tutorial_2.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+                            </td>  
+                            <td>
+							  <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/Pytorch/Pytorch_Tutorial.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							</td> 
+							<td>N/A</td>
+							<th>
+						      <a class="btn btn-primary" style="background-color: #000000; color: #ffffff; border-style: none" href="https://youtu.be/CyV3zbcuufs" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/8DaeP2vSu90" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>		
+							</th>
+							<th>N/A</th>
+							<th>張恆瑞、許湛然</th>
+						  </tr>
+     					  <tr>
+						    <td id="hw1">HW1</td>
+							<td>Regression</td>
+                            <td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW01/HW01.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+                              <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW01/HW01.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style="background-color: #80dfff; border-style: none" href="https://www.kaggle.com/c/ml2021spring-hw1" target="_blank" rel="noopener" role="button" disabled><i class="fab fa-kaggle"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/7n3t_Yf2x6Q" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/Q4yskCCixhw" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>		
+							</th>
+
+							<th>3/05~3/26</th>
+							<th>張恆瑞、許湛然</th>
+						  </tr>
+						  <tr>
+						    <td id="hw2">HW2</td>
+							<td>Classification</td>
+	                        <td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW02/HW02.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+                              <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW02/HW02-1.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							  <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW02/HW02-2.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style="background-color: #80dfff; border-style: none" 
+							    href="https://www.kaggle.com/c/ml2021spring-hw2" target="_blank" rel="noopener" role="button"><i class="fab fa-kaggle"></i></a>
+							  <a class="btn btn-primary" style="background-color: gray; border-style: none" 
+							    href="https://cool.ntu.edu.tw/courses/4793/quizzes/8798" target="_blank" rel="noopener" role="button"><i class="far fa-check-square" style="color: white"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/ESRr-VCykBs" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/PdjXnQbu2zo" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>		
+							</th>
+
+							<th>3/12~4/02</th>
+							<th>孟妍、李威緒、陳宣叡、施貽仁</th>
+						  </tr> 
+                          <tr>
+						    <td id="hw3">HW3</td>
+							<td>CNN</td>
+                            <td>
+                              <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW03/HW03.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+							  <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW03/HW03.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style="background-color: #80dfff; border-style: none" 
+							    href="https://www.kaggle.com/t/3040c87b4dfd7b68d415f215f16525df" target="_blank" rel="noopener" role="button"><i class="fab fa-kaggle"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/80E56NgluMI" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/WhOek_gQna0" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>		
+							</th>
+
+							<th>3/26~4/16</th>
+							<th>曾韋誠、黃健祐</th>
+						  </tr>
+						  <tr>
+						    <td id="hw4">HW4</td>
+							<td>Self-Attention</td>
+                            <td>
+                              <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW04/HW04.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+							  <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW04/HW04.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style="background-color: #80dfff; border-style: none" 
+							    href="https://www.kaggle.com/t/859c9ca9ede14fdea841be627c412322" target="_blank" rel="noopener" role="button"><i class="fab fa-kaggle"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/Gpz6AUvCak0" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/EPerg2UnGaI" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>		
+							</th>
+
+							<th>3/26~4/16</th>
+							<th>黃子賢、林政豪</th>
+						  </tr>
+						  <tr>
+						    <td id="hw5">HW5</td>
+							<td>Transformer</td>
+                            <td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW05/HW05.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+							  <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW05/HW05.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							  <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW05/HW05_ZH.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary disabled" style="background-color: #008000; border-style: none" 
+							    href="#!" target="_blank" rel="noopener" role="button"><i class="fas fa-mars"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/1pjS5_L5REI" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/htG5WpZVQPU" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>		
+							</th>
+
+							<th>4/09~4/30</th>
+							<th>蔡翔陞、張致強、曾韋誠、陳建成</th>
+						  </tr>
+						  <tr>
+						    <td id="hw6">HW6</td>
+							<td>GAN</td>
+                            <td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW06/HW06.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW06/HW06.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+							<td>
+							  <a class="btn btn-primary disabled" style="background-color: #008000; border-style: none" 
+							    href="#!" target="_blank" rel="noopener" role="button"><i class="fas fa-mars"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/9tlvdue-9dA" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/RbFjXqL3Hio" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>		
+							</th>
+
+							<th>4/16~5/14</th>
+							<th>陳延昊、吳宗翰</th>
+						  </tr> 
+                          <tr>
+						    <td id="hw7">HW7</td>
+							<td>BERT</td>
+                            <td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW07/HW07.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW07/HW07.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+
+							<td>
+							  <a class="btn btn-primary" style="background-color: #80dfff; border-style: none" 
+							    href="https://www.kaggle.com/c/ml2021-spring-hw7" target="_blank" rel="noopener" role="button"><i class="fab fa-kaggle"></i></a>
+						    </td>
+							<td>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/SnqP5HnOBD8" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/DoZlp0vfDmI" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+							<th>4/30~5/21</th>
+							<th>李高迪、王昱凱</th>
+						  </tr>
+						  <tr>
+						    <td id="hw8">HW8</td>
+							<td>Anomaly Detection</td>
+                            <td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW08/HW08.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW08/HW08.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+
+							<td>
+							  <a class="btn btn-primary" style="background-color: #80dfff; border-style: none" 
+							    href="https://www.kaggle.com/c/ml2021spring-hw8" target="_blank" rel="noopener" role="button"><i class="fab fa-kaggle"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/pKMJK2gldiI" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/xkpXP4byXqk" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+					
+							<th>4/30~5/21</th>
+							<th>謝濬丞、王昱凱</th>
+						  </tr>
+						  <tr>
+						    <td id="hw9">HW9</td>
+							<td>Explainable AI</td>
+                            <td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW09/HW09.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW09/HW09.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+							<td>
+							  <a class="btn btn-primary disabled" style="background-color: gray; border-style: none" 
+							    href="#!" target="_blank" rel="noopener" role="button"><i class="far fa-check-square" style="color: white"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://www.youtube.com/watch?v=9j6PnN6hB84&list=PLJV_el3uVTsOzSTAjEJbLBw5N3LJl3hzK" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/cq-5wZT_Ibw" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+						
+							<th>5/07~5/28</th>
+							<th>吳兩原、李高迪</th>
+						  </tr>
+						  <tr>
+						    <td id="hw10">HW10</td>
+							<td>Attack</td>
+                            <td>
+							  <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW10/HW10.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW10/HW10.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+
+							<td>
+                              <a class="btn btn-primary disabled" style="background-color: #008000; border-style: none" 
+							    href="#!" target="_blank" rel="noopener" role="button"><i class="fas fa-mars"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/313TZsUDQ48" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/xWHpPEvkDiE" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+						
+							<th>5/07~5/28</th>
+							<th>林毓宸、黃啟斌</th>
+						  </tr> 
+                          <tr>
+						    <td id="hw11">HW11</td>
+							<td>Adaptation</td>
+							<td>
+                              <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW11/HW11.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW11/HW11_ZH.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							  <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW11/HW11_EN.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+							<td>
+							  <a class="btn btn-primary" style="background-color: #80dfff; border-style: none" href="https://www.kaggle.com/t/293cf7bbf6dd4ed2b86f8758f79dd55c" 
+							    target="_blank" rel="noopener" role="button"><i class="fab fa-kaggle"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/3B64TxGhZ54" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/eyDB-gSk7u8" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+						
+							<th>5/21~6/11</th>
+							<th>Arvin Liu、陳子晴</th>
+						  </tr>
+						  <tr>
+						    <td id="hw12">HW12</td>
+							<td>RL</td>
+							<td>
+                              <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW12/HW12_EN.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW12/HW12_ZH.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							  <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW12/HW12_EN.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+							<td>
+							  <a class="btn btn-primary disabled" style="background-color: #008000; border-style: none" 
+							    href="#!" target="_blank" rel="noopener" role="button"><i class="fas fa-mars"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/EnllW6UjYtI" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/9TksSERlLHA" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+						
+							<th>6/04~6/25</th>
+							<th>王式珩、許湛然、陳建成、蔡翔陞</th>
+						  </tr>
+						  <tr>
+						    <td id="hw13">HW13</td>
+							<td>Compression</td>
+                            <td>
+                              <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW13/HW13.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW13/HW13.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+
+							<td>
+							  <a class="btn btn-primary" style="background-color: #80dfff; border-style: none" href="https://www.kaggle.com/c/ml2021spring-hw13" 
+							    target="_blank" rel="noopener" role="button"><i class="fab fa-kaggle"></i></a>
+							</td>
+							<td>
+							  	<a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/VnAAMj-xlAY" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+						</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/-RZ6Lyqg1_c" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+						
+							<th>6/11~7/02</th>
+							<th>Arvin Liu、田昀曜</th>
+						  </tr>
+						  <tr>
+						    <td id="hw14">HW14</td>
+							<td>Life-Long Learning</td>
+							<td>
+                              <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW14/HW14.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW14/HW14.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+							<td>
+							  <a class="btn btn-primary disabled" style="background-color: gray; border-style: none" 
+							    href="#!" target="_blank" rel="noopener" role="button"><i class="far fa-check-square" style="color: white"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/ITmtJoy2PfA" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>
+							</td>
+							<th>
+						      <a class="btn btn-primary" style=" background-color: #000000; color: #ffffff;border-style: none" href="https://youtu.be/VwiwRr1k8n8" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+						
+							<th>6/11~7/02</th>
+							<th>紀伯翰、蘇軒</th>
+						  </tr> 
+						  <tr>
+						    <td id="hw15">HW15</td>
+							<td>Meta Learning</td>
+                            <td>
+                              <a class="btn btn-primary" style="background-color: #ffa64d; border-style: none" href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/hw/HW15/HW15.pdf" target="_blank" rel="noopener" role="button"><i class="fas fa-file-powerpoint"></i></a>
+							</td> 
+							<td>
+						      <a class="btn btn-primary" style="background-color: #26353E; border-style: none" href="https://colab.research.google.com/github/ga642381/ML2021-Spring/blob/main/HW15/HW15.ipynb" target="_blank" rel="noopener" role="button"><i class="fas fa-code"></i></a>	
+							</td>
+							<td>
+				     		  <a class="btn btn-primary disabled" style="background-color: gray; border-style: none" 
+							    href="#!" target="_blank" rel="noopener" role="button"><i class="far fa-check-square" style="color: white"></i></a>
+							</td>
+							<td>
+							  <a class="btn btn-primary disabled" style=" background-color: #000000; color: #ffffff;border-style: none" href="" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</td>
+							<th>
+						      <a class="btn btn-primary disabled" style=" background-color: #000000; color: #ffffff;border-style: none" href="" target="_blank" rel="noopener" role="button"><i class="fab fa-youtube"></i></a>	
+							</th>
+						
+							<th>6/18~7/09</th>
+							<th>黃冠博、陳建成、許湛然</th>
+						  </tr> 
+
+						</tbody>
+					  </table>
+					</div>
+                  </section>
+                </div>
+
+            </section>
+            <section class="wrapper style4 container" style="border-radius: 20px;">
+              <!-- Content -->
+                <div class="content">
+                  <section>
+                    <header style = "text-align: center">
+                      <h3>Contact</h3>
+                    </header>
+                      <p style="font-size: large; text-align: center">
+					    Email:<a href="mailto:ntu-ml-2021spring-ta@googlegroups.com">ntu-ml-2021spring-ta@googlegroups.com</a> 
+					  </p>
+                  </section>
+                </div>
+
+            </section>
+
+        </article>
+
+      <!-- Footer -->
+        <footer id="footer">
+
+          <ul class="icons">
+            <li><a href="https://www.facebook.com/profile.php?id=100000149111577" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ/playlists" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+          </ul>
+
+          <ul class="copyright">
+            <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      <script src="../assets/js/jquery.min.js"></script>
+      <script src="../assets/js/jquery.dropotron.min.js"></script>
+      <script src="../assets/js/jquery.scrolly.min.js"></script>
+      <script src="../assets/js/jquery.scrollgress.min.js"></script>
+      <script src="../assets/js/jquery.scrollex.min.js"></script>
+      <script src="../assets/js/browser.min.js"></script>
+      <script src="../assets/js/breakpoints.min.js"></script>
+      <script src="../assets/js/util.js"></script>
+      <script src="../assets/js/main.js"></script>
+
+  </body>
+</html>
