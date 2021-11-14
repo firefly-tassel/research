@@ -151,7 +151,7 @@ function Calculate() {
                                 />
                             </div>
                             <div className={calculateStyles.handleImg}>
-                                <h2 className={calculateStyles.title}>二值化图像</h2>
+                                <h2 className={calculateStyles.title}>边缘检测图像</h2>
                                 <Image
                                     className={calculateStyles.resultImg}
                                     src={handleImg}

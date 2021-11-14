@@ -18,8 +18,19 @@ function Perception() {
 
     const next = () => {
         if (current === 0) {
-            perception();
-            setPercent(100);
+            setTimeout(() => {
+                setPercent(25);
+                setTimeout(() => {
+                    setPercent(50);
+                    setTimeout(() => {
+                        setPercent(75);
+                        setTimeout(() => {
+                            perception();
+                            setPercent(100);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
         }
         setCurrent(current + 1);
     };

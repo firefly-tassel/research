@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ConfigProvider } from 'antd';
+// import enUS from 'antd/lib/locale/en_US';
+import zhCN from 'antd/lib/locale/zh_CN';
 import store from './redux/store'
 import { Provider } from 'react-redux';
 import './index.css';
@@ -8,7 +11,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store} ><App /></Provider>
+    <Provider store={store} >
+      <ConfigProvider locale={zhCN}><App /></ConfigProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

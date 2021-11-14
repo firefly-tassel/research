@@ -6,39 +6,39 @@ import { GlobeComponent } from 'echarts-gl/components';
 import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import defect from '../../assets/images/defect-detecting.png'
-// import star from '../../assets/images/star.jpg'
-// import earth from '../../assets/images/earth.jpg'
+import star from '../../assets/images/star.jpg'
+import earth from '../../assets/images/earth.jpg'
 import funcStyles from './index.module.less'
 
 const { Meta } = Card;
 echarts.use([GlobeComponent, CanvasRenderer]);
-// var myChart;
+var myChart;
 
 class FunctionIntro extends Component {
-    // componentDidMount() {
-    //     var chartDom = document.getElementById('earth');
-    //     myChart = echarts.init(chartDom);
-    //     myChart.setOption({
-    //         backgroundColor: '#000',
-    //         globe: {
-    //             baseTexture: earth,
-    //             shading: 'lambert',
-    //             environment: star,
-    //             atmosphere: {
-    //                 show: true
-    //             },
-    //             light: {
-    //                 ambient: {
-    //                     intensity: 0.1
-    //                 },
-    //                 main: {
-    //                     intensity: 1.5
-    //                 }
-    //             }
-    //         },
-    //         series: [],
-    //     });
-    // }
+    componentDidMount() {
+        var chartDom = document.getElementById('earth');
+        myChart = echarts.init(chartDom);
+        myChart.setOption({
+            backgroundColor: '#000',
+            globe: {
+                baseTexture: earth,
+                shading: 'lambert',
+                environment: star,
+                atmosphere: {
+                    show: true
+                },
+                light: {
+                    ambient: {
+                        intensity: 0.1
+                    },
+                    main: {
+                        intensity: 1.5
+                    }
+                }
+            },
+            series: [],
+        });
+    }
 
     render() {
         return (
